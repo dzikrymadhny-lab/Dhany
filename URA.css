@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  background: transparent;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.animated-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#bg-canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10,15,30,0.92);
+  padding: 18px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color: #00aaff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 16px;
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .3s;
+}
+
+.nav-menu li a:hover {
+  color: #00aaff;
+}
+
+.lang-switch button {
+  background: #222b40;
+  color: #00aaff;
+  border: none;
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background .2s;
+}
+
+.lang-switch button:hover {
+  background: #003366;
+}
+
+.hero {
+  padding: 100px 20px 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: .2em;
+  color: #00aaff;
+}
+
+.subtitle {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+.cta {
+  background: linear-gradient(90deg, #00aaff 60%, #000c1d 100%);
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 0 8px 32px 0 rgba(0,170,255,0.12);
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background .3s;
+}
+
+.cta:hover {
+  background: linear-gradient(90deg, #003366 60%, #00aaff 100%);
+}
+
+.technology {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 20px;
+}
+
+.tech-icon {
+  font-size: 2.5em;
+  color: #00aaff;
+  background: rgba(0, 10, 30, 0.7);
+  border-radius: 12px;
+  padding: 18px 28px;
+  box-shadow: 0 4px 20px rgba(0,170,255,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-icon i {
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+
+.about-me, .education, .contact, .achievements {
+  background: rgba(12, 18, 30, 0.86);
+  margin: 40px auto;
+  padding: 40px 20px;
+  max-width: 800px;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,170,255,0.11);
+}
+
+.about-me h2, .education h2, .contact h2, .achievements h2 {
+  color: #00aaff;
+  margin-bottom: 18px;
+}
+
+.edu-list {
+  padding-left: 18px;
+}
+
+.exp {
+  margin-top: 16px;
+  font-size: 1.07em;
+  color: #00aaff;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  font-size: 1.3em;
+}
+
+.contact-list a {
+  color: #00aaff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-list a:hover {
+  color: #fff;
+}
+
+.achievements {
+  text-align: center;
+}
+
+.achievement-item {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.achievement-item img {
+  max-width: 340px;
+  border-radius: 8px;
+  box-shadow: 0 4px 22px rgba(0,170,255,0.10);
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .about-me, .education, .contact, .achievements {
+    max-width: 98vw;
+    padding: 20px 5vw;
+  }
+  .tech-icons {
+    flex-direction: column;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 12px;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #101a2d;
+    position: absolute;
+    top: 58px;
+    right: 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px #00aaff44;
+    padding: 12px 0;
+    width: 160px;
+    z-index: 999;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
